@@ -1,7 +1,7 @@
 import torch.nn
 import torch
 import torch.nn as nn
-import .modules as modules
+import modules as modules
 import numpy as np
 
 from models.base_model import BaseModule
