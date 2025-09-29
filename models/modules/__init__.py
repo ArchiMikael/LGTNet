@@ -3,6 +3,6 @@
 @description:
 """
 
-from .models.modules.swin_transformer import Swin_Transformer
-from .models.modules.swg_transformer import SWG_Transformer
-from .models.modules.transformer import Transformer
+from .swin_transformer import Swin_Transformer
+from .swg_transformer import SWG_Transformer
+from .transformer import Transformer
