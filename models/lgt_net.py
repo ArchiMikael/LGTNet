@@ -1,7 +1,12 @@
+import sys
+import os
+parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(parent_dir)
+
 import torch.nn
 import torch
 import torch.nn as nn
-import modules as modules
+import models.modules as modules
 import numpy as np
 
 from models.base_model import BaseModule
