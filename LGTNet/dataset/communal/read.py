@@ -7,8 +7,8 @@ import numpy as np
 import cv2
 import json
 from PIL import Image
-from utils.conversion import xyz2uv, pixel2uv
-from utils.height import calc_ceil_ratio
+from ...utils.conversion import xyz2uv, pixel2uv
+from ...utils.height import calc_ceil_ratio
 
 
 def read_image(image_path, shape=None):

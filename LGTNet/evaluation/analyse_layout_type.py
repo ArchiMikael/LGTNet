@@ -10,10 +10,10 @@ import matplotlib.pyplot as plt
 import json
 
 from tqdm import tqdm
-from evaluation.iou import calc_IoU_2D
-from visualization.floorplan import draw_floorplan
-from visualization.boundary import draw_boundaries
-from utils.conversion import depth2xyz, uv2xyz
+from .iou import calc_IoU_2D
+from ..visualization.floorplan import draw_floorplan
+from ..visualization.boundary import draw_boundaries
+from ..utils.conversion import depth2xyz, uv2xyz
 
 
 def analyse_layout_type(dataset, show=False):

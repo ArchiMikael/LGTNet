@@ -5,9 +5,9 @@
 import numpy as np
 import torch
 
-from utils.boundary import corners2boundary, visibility_corners, get_heat_map
-from utils.conversion import xyz2depth, uv2xyz, uv2pixel
-from dataset.communal.data_augmentation import PanoDataAugmentation
+from ...utils.boundary import corners2boundary, visibility_corners, get_heat_map
+from ...utils.conversion import xyz2depth, uv2xyz, uv2pixel
+from .data_augmentation import PanoDataAugmentation
 
 
 class BaseDataset(torch.utils.data.Dataset):

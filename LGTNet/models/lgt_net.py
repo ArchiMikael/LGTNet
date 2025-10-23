@@ -1,20 +1,14 @@
-import sys
-import os
-parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-sys.path.append(parent_dir)
-
 import torch.nn
 import torch
 import torch.nn as nn
-import models.modules as modules
 import numpy as np
 
-from models.base_model import BaseModule
-from models.modules.horizon_net_feature_extractor import HorizonNetFeatureExtractor
-from models.modules.patch_feature_extractor import PatchFeatureExtractor
-from utils.conversion import uv2depth, get_u, lonlat2depth, get_lon, lonlat2uv
-from utils.height import calc_ceil_ratio
-from utils.misc import tensor2np
+from .base_model import BaseModule
+from .modules.horizon_net_feature_extractor import HorizonNetFeatureExtractor
+from .modules.patch_feature_extractor import PatchFeatureExtractor
+from ..utils.conversion import uv2depth, get_u, lonlat2depth, get_lon, lonlat2uv
+from ..utils.height import calc_ceil_ratio
+from ..utils.misc import tensor2np
 
 
 class LGT_Net(BaseModule):
@@ -44,6 +38,7 @@ class LGT_Net(BaseModule):
             transformer_head_dim = transformer_dim // transformer_heads
             transformer_ff_dim = 2048
             rpe = None if rpe == 'None' else rpe
+            from . import modules as modules
             self.transformer = getattr(modules, decoder_name)(dim=transformer_dim, depth=transformer_layers,
                                                               heads=transformer_heads, dim_head=transformer_head_dim,
                                                               mlp_dim=transformer_ff_dim, win_size=win_size,

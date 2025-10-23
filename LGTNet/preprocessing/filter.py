@@ -7,13 +7,13 @@ import math
 import shutil
 
 import numpy as np
-from utils.boundary import *
-import dataset
+from ..utils.boundary import *
+from .. import dataset
 import os
 from tqdm import tqdm
 from PIL import Image
-from visualization.boundary import *
-from visualization.floorplan import *
+from ..visualization.boundary import *
+from ..visualization.floorplan import *
 from shapely.geometry import Polygon, Point
 
 

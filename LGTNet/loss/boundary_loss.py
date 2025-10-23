@@ -4,7 +4,7 @@
 """
 import torch
 import torch.nn as nn
-from utils.conversion import depth2xyz, xyz2lonlat
+from ..utils.conversion import depth2xyz, xyz2lonlat
 
 
 class BoundaryLoss(nn.Module):

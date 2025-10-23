@@ -6,7 +6,7 @@ import numpy as np
 import cv2
 import functools
 
-from utils.conversion import pixel2lonlat, lonlat2pixel, uv2lonlat, lonlat2uv, pixel2uv
+from ...utils.conversion import pixel2lonlat, lonlat2pixel, uv2lonlat, lonlat2uv, pixel2uv
 
 
 @functools.lru_cache()

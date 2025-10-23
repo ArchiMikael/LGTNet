@@ -6,15 +6,15 @@ import numpy as np
 import cv2
 import scipy
 
-from evaluation.f1_score import f1_score_2d
-from loss import GradLoss
-from utils.boundary import corners2boundaries, layout2depth
-from utils.conversion import depth2xyz, uv2xyz, get_u, depth2uv, xyz2uv, uv2pixel
-from utils.height import calc_ceil_ratio
-from evaluation.iou import calc_IoU, calc_Iou_height
-from visualization.boundary import draw_boundaries
-from visualization.floorplan import draw_iou_floorplan
-from visualization.grad import show_grad
+from .f1_score import f1_score_2d
+from ..loss import GradLoss
+from ..utils.boundary import corners2boundaries, layout2depth
+from ..utils.conversion import depth2xyz, uv2xyz, get_u, depth2uv, xyz2uv, uv2pixel
+from ..utils.height import calc_ceil_ratio
+from .iou import calc_IoU, calc_Iou_height
+from ..visualization.boundary import draw_boundaries
+from ..visualization.floorplan import draw_iou_floorplan
+from ..visualization.grad import show_grad
 
 
 def calc_accuracy(dt, gt, visualization=False, h=512):

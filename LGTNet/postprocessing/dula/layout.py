@@ -7,10 +7,8 @@ import numpy as np
 import math
 import matplotlib.pyplot as plt
 import sys
-import os.path as osp
-sys.path.append(osp.abspath(osp.join(__file__, '../../../')))
 
-from visualization.floorplan import draw_floorplan
+from ...visualization.floorplan import draw_floorplan
 
 def calc_angle(v1: np.array, v2: np.array):
     norm = np.linalg.norm(v1) * np.linalg.norm(v2)

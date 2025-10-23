@@ -5,9 +5,9 @@
 import numpy as np
 import cv2
 
-from postprocessing.dula.layout import fit_layout
-from postprocessing.dula.layout_old import fit_layout_old
-from utils.conversion import depth2xyz, xyz2depth
+from .dula.layout import fit_layout
+from .dula.layout_old import fit_layout_old
+from ..utils.conversion import depth2xyz, xyz2depth
 
 
 def post_process(b_depth, type_name='manhattan', need_cube=False):

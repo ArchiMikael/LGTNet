@@ -1,4 +1,4 @@
-from models.modules.transformer_modules import *
+from .transformer_modules import *
 
 
 class SWG_Transformer(nn.Module):

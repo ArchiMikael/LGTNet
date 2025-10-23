@@ -5,8 +5,8 @@
 
 import os
 
-from dataset.pano_s2d3d_dataset import PanoS2D3DDataset
-from utils.logger import get_logger
+from .pano_s2d3d_dataset import PanoS2D3DDataset
+from ..utils.logger import get_logger
 
 
 class PanoS2D3DMixDataset(PanoS2D3DDataset):

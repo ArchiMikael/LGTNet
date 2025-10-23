@@ -5,9 +5,9 @@
 import os
 import json
 
-from dataset.communal.read import read_image, read_label
-from dataset.communal.base_dataset import BaseDataset
-from utils.logger import get_logger
+from .communal.read import read_image, read_label
+from .communal.base_dataset import BaseDataset
+from ..utils.logger import get_logger
 
 
 class MP3DDataset(BaseDataset):

@@ -6,8 +6,8 @@
 import matplotlib.pyplot as plt
 import cv2
 import numpy as np
-from utils.conversion import uv2pixel
-from utils.boundary import corners2boundary, corners2boundaries, find_peaks, connect_corners_uv, get_object_cor, \
+from ..utils.conversion import uv2pixel
+from ..utils.boundary import corners2boundary, corners2boundaries, find_peaks, connect_corners_uv, get_object_cor, \
     visibility_corners
 
 

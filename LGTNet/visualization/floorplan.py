@@ -8,7 +8,7 @@ import cv2
 import matplotlib.pyplot as plt
 
 from PIL import Image
-from utils.boundary import *
+from ..utils.boundary import *
 
 
 def draw_floorplan(xz, fill_color=None, border_color=None, side_l=512, show_radius=None, show=False, marker_color=None,

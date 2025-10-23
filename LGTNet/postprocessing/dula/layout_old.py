@@ -7,7 +7,7 @@ import numpy as np
 import math
 import matplotlib.pyplot as plt
 
-from visualization.floorplan import draw_floorplan
+from ...visualization.floorplan import draw_floorplan
 
 
 def merge_near(lst, diag):
@@ -119,7 +119,7 @@ def fit_layout_old(floor_xz, need_cube=False, show=False, block_eps=0.05):
 
 
 if __name__ == '__main__':
-    from utils.conversion import uv2xyz
+    from ...utils.conversion import uv2xyz
 
     pano_img = np.zeros([512, 1024, 3])
     corners = np.array([[0.1, 0.7],

@@ -7,11 +7,11 @@ import json
 import math
 import numpy as np
 
-from dataset.communal.read import read_image, read_label, read_zind
-from dataset.communal.base_dataset import BaseDataset
-from utils.logger import get_logger
-from preprocessing.filter import filter_center, filter_boundary, filter_self_intersection
-from utils.boundary import calc_rotation
+from .communal.read import read_image, read_label, read_zind
+from .communal.base_dataset import BaseDataset
+from ..utils.logger import get_logger
+from ..preprocessing.filter import filter_center, filter_boundary, filter_self_intersection
+from ..utils.boundary import calc_rotation
 
 
 class ZindDataset(BaseDataset):

@@ -4,7 +4,7 @@
 """
 import torch
 import torch.nn as nn
-from loss.grad_loss import GradLoss
+from .grad_loss import GradLoss
 
 
 class ObjectLoss(nn.Module):

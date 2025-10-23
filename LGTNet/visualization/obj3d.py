@@ -5,7 +5,7 @@
 """
 import open3d
 import numpy as np
-from utils.conversion import pixel2lonlat
+from ..utils.conversion import pixel2lonlat
 
 
 def create_3d_obj(img, depth, save_path=None, mesh=True, mesh_show_back_face=False, show=False):

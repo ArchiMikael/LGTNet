@@ -6,9 +6,9 @@ import math
 import os
 import numpy as np
 
-from dataset.communal.read import read_image, read_label
-from dataset.communal.base_dataset import BaseDataset
-from utils.logger import get_logger
+from .communal.read import read_image, read_label
+from .communal.base_dataset import BaseDataset
+from ..utils.logger import get_logger
 
 
 class PanoS2D3DDataset(BaseDataset):

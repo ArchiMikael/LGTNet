@@ -7,7 +7,7 @@ import torch
 import torch.nn as nn
 import numpy as np
 
-from visualization.grad import get_all
+from ..visualization.grad import get_all
 
 
 class GradLoss(nn.Module):

@@ -3,9 +3,9 @@
 @description:
 """
 import torch
-import loss
+from ... import loss
 
-from utils.misc import tensor2np
+from ...utils.misc import tensor2np
 
 
 def build_criterion(config, logger):

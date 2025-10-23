@@ -5,7 +5,7 @@
 import numpy as np
 from typing import List
 
-from utils.boundary import *
+from .boundary import *
 from scipy.optimize import least_squares
 from functools import partial
 

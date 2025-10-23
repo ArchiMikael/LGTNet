@@ -7,7 +7,7 @@ import numpy as np
 import torch
 import matplotlib.pyplot as plt
 
-from utils.conversion import depth2xyz
+from ..utils.conversion import depth2xyz
 
 
 def convert_img(value, h, need_nor=True, cmap=None):

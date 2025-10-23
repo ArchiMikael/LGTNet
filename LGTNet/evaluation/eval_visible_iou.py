@@ -9,9 +9,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from tqdm import tqdm
-from evaluation.iou import calc_IoU_2D
-from visualization.floorplan import draw_iou_floorplan
-from utils.conversion import depth2xyz, uv2xyz
+from .iou import calc_IoU_2D
+from ..visualization.floorplan import draw_iou_floorplan
+from ..utils.conversion import depth2xyz, uv2xyz
 
 
 def eval_dataset_visible_IoU(dataset, show=False):

@@ -3,15 +3,15 @@
 @description:
 """
 import os
-import models
+from .. import models
 import torch.distributed as dist
 import torch
 
 from torch.nn import init
 from torch.optim import lr_scheduler
-from utils.time_watch import TimeWatch
-from models.other.optimizer import build_optimizer
-from models.other.criterion import build_criterion
+from ..utils.time_watch import TimeWatch
+from .other.optimizer import build_optimizer
+from .other.criterion import build_criterion
 
 
 def build_model(config, logger):

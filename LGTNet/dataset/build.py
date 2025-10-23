@@ -4,10 +4,10 @@
 """
 import numpy as np
 import torch.utils.data
-from dataset.mp3d_dataset import MP3DDataset
-from dataset.pano_s2d3d_dataset import PanoS2D3DDataset
-from dataset.pano_s2d3d_mix_dataset import PanoS2D3DMixDataset
-from dataset.zind_dataset import ZindDataset
+from .mp3d_dataset import MP3DDataset
+from .pano_s2d3d_dataset import PanoS2D3DDataset
+from .pano_s2d3d_mix_dataset import PanoS2D3DMixDataset
+from .zind_dataset import ZindDataset
 
 
 def build_loader(config, logger):
