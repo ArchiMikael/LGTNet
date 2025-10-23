@@ -19,16 +19,16 @@ import torch.cuda
 from PIL import Image
 from tqdm import tqdm
 from torch.utils.tensorboard import SummaryWriter
-from config.defaults import get_config, get_rank_config
-from models.other.criterion import calc_criterion
-from models.build import build_model
-from models.other.init_env import init_env
-from utils.logger import build_logger
-from utils.misc import tensor2np_d, tensor2np
-from dataset.build import build_loader
-from evaluation.accuracy import calc_accuracy, show_heat_map, calc_ce, calc_pe, calc_rmse_delta_1, \
+from LGTNet.config.defaults import get_config, get_rank_config
+from LGTNet.models.other.criterion import calc_criterion
+from LGTNet.models.build import build_model
+from LGTNet.models.other.init_env import init_env
+from LGTNet.utils.logger import build_logger
+from LGTNet.utils.misc import tensor2np_d, tensor2np
+from LGTNet.dataset.build import build_loader
+from LGTNet.evaluation.accuracy import calc_accuracy, show_heat_map, calc_ce, calc_pe, calc_rmse_delta_1, \
     show_depth_normal_grad, calc_f1_score
-from postprocessing.post_process import post_process
+from LGTNet.postprocessing.post_process import post_process
 
 try:
     from apex import amp

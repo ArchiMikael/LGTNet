@@ -11,10 +11,10 @@ import torch
 
 from PIL import Image
 
-from utils.logger import get_logger
-from config.defaults import get_config
+from LGTNet.utils.logger import get_logger
+from LGTNet.config.defaults import get_config
 from inference import preprocess, run_one_inference
-from models.build import build_model
+from LGTNet.models.build import build_model
 from argparse import Namespace
 import gdown
 

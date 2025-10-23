@@ -13,23 +13,23 @@ import glob
 
 from tqdm import tqdm
 from PIL import Image
-from config.defaults import merge_from_file, get_config
-from dataset.mp3d_dataset import MP3DDataset
-from dataset.zind_dataset import ZindDataset
-from models.build import build_model
-from loss import GradLoss
-from postprocessing.post_process import post_process
-from preprocessing.pano_lsd_align import panoEdgeDetection, rotatePanorama
-from utils.boundary import corners2boundaries, layout2depth
-from utils.conversion import depth2xyz
-from utils.logger import get_logger
-from utils.misc import tensor2np_d, tensor2np
-from evaluation.accuracy import show_grad
-from models.lgt_net import LGT_Net
-from utils.writer import xyz2json
-from visualization.boundary import draw_boundaries
-from visualization.floorplan import draw_floorplan, draw_iou_floorplan
-from visualization.obj3d import create_3d_obj
+from LGTNet.config.defaults import merge_from_file, get_config
+from LGTNet.dataset.mp3d_dataset import MP3DDataset
+from LGTNet.dataset.zind_dataset import ZindDataset
+from LGTNet.models.build import build_model
+from LGTNet.loss import GradLoss
+from LGTNet.postprocessing.post_process import post_process
+from LGTNet.preprocessing.pano_lsd_align import panoEdgeDetection, rotatePanorama
+from LGTNet.utils.boundary import corners2boundaries, layout2depth
+from LGTNet.utils.conversion import depth2xyz
+from LGTNet.utils.logger import get_logger
+from LGTNet.utils.misc import tensor2np_d, tensor2np
+from LGTNet.evaluation.accuracy import show_grad
+from LGTNet.models.lgt_net import LGT_Net
+from LGTNet.utils.writer import xyz2json
+from LGTNet.visualization.boundary import draw_boundaries
+from LGTNet.visualization.floorplan import draw_floorplan, draw_iou_floorplan
+from LGTNet.visualization.obj3d import create_3d_obj
 
 
 def parse_option():
@@ -214,7 +214,7 @@ def run_one_inference(img, model, args, name, logger, show=True, show_depth=True
     json_data = save_pred_json(output_xyz, tensor2np(dt['ratio'][0])[0],
                                save_path=os.path.join(args.output_dir, f"{name}_pred.json"))
     # if args.visualize_3d:
-    #     from visualization.visualizer.visualizer import visualize_3d
+    #     from LGTNet.visualization.visualizer.visualizer import visualize_3d
     #     visualize_3d(json_data, (img * 255).astype(np.uint8))
 
     if args.visualize_3d or args.output_3d:
