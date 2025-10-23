@@ -2,6 +2,9 @@
 @date: 2021/06/19
 @description:
 """
+import sys
+import os
+
 import math
 import functools
 
@@ -9,8 +12,10 @@ from scipy import stats
 from scipy.ndimage.filters import maximum_filter
 import numpy as np
 from typing import List
-from utils.conversion import uv2xyz, xyz2uv, depth2xyz, uv2pixel, depth2uv, pixel2uv, xyz2pixel, uv2lonlat
-from utils.visibility_polygon import calc_visible_polygon
+
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+from conversion import uv2xyz, xyz2uv, depth2xyz, uv2pixel, depth2uv, pixel2uv, xyz2pixel, uv2lonlat
+from visibility_polygon import calc_visible_polygon
 
 
 def connect_corners_uv(uv1: np.ndarray, uv2: np.ndarray, length=256) -> np.ndarray:
