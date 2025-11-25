@@ -109,7 +109,7 @@ def uv2xyz(uv, plan_y=None, spherical=False):
         return xyz
 
     if plan_y is None:
-        from utils.boundary import boundary_type
+        from .boundary import boundary_type
         plan_y = boundary_type(uv)
     # Projection onto the specified plane
     xyz = xyz * (plan_y / xyz[..., 1])[..., None]
@@ -242,7 +242,7 @@ def xyz2depth(xyz, plan_y=1):
 
 def uv2depth(uv, plan_y=None):
     if plan_y is None:
-        from utils.boundary import boundary_type
+        from .boundary import boundary_type
         plan_y = boundary_type(uv)
 
     xyz = uv2xyz(uv, plan_y)
@@ -252,7 +252,7 @@ def uv2depth(uv, plan_y=None):
 
 def lonlat2depth(lonlat, plan_y=None):
     if plan_y is None:
-        from utils.boundary import boundary_type
+        from .boundary import boundary_type
         plan_y = boundary_type(lonlat2uv(lonlat))
 
     xyz = lonlat2xyz(lonlat, plan_y)
